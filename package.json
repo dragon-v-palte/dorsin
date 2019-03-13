@@ -1,0 +1,39 @@
+{
+  "name": "dorsin",
+  "version": "1.0.0",
+  "description": "none",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dragon-v-palte/dorsin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dragon-v-palte/dorsin/issues"
+  },
+  "homepage": "https://github.com/dragon-v-palte/dorsin#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-util": "^3.0.8"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.4.10",
+    "browser-sync": "^2.26.3",
+    "del": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-rename": "^1.4.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-scss": "^1.4.0",
+    "gulp-uglify": "^3.0.2",
+    "imagemin": "^6.1.0",
+    "rename": "^1.0.4",
+    "rigger": "^1.0.0",
+    "uglify": "^0.1.5"
+  }
+}
