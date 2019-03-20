@@ -29,6 +29,7 @@
     "gulp-imagemin": "^5.0.3",
     "gulp-rename": "^1.4.0",
     "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^4.0.2",
     "gulp-scss": "^1.4.0",
     "gulp-uglify": "^3.0.2",
     "imagemin": "^6.1.0",
