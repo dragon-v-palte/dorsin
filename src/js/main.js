@@ -4,12 +4,12 @@ window.onload  = function() {
     if (window.pageYOffset == 0 && document.documentElement.clientWidth >= 768)
     {
         header.style.background = "transparent";
-        header.style.padding = "20px 50px";
+        header.style.padding = "10px 50px";
     }
     else
     {
         header.style.background = "#272a33";
-        header.style.padding = "15px 50px";
+        header.style.padding = "5px 50px";
     }
     menuNavbar = document.getElementsByClassName("nav-link");//getElementById("myNavbar").getElementsByTagName("a");
 
@@ -19,12 +19,12 @@ window.onresize = function() {
 	if (window.pageYOffset == 0 && document.documentElement.clientWidth >= 768)
     {
         header.style.background = "transparent";
-        header.style.padding = "20px 50px";
+        header.style.padding = "10px 50px";
     }
     else
     {
         header.style.background = "#272a33";
-        header.style.padding = "15px 50px";
+        header.style.padding = "5px 50px";
     }
 }
 
@@ -35,15 +35,15 @@ window.onscroll = function() {
     if (window.pageYOffset == 0 && document.documentElement.clientWidth >= 768)
     {
         header.style.background = "transparent";
-        header.style.padding = "20px 50px";
+        header.style.padding = "10px 50px";
     }
     else
     {
         header.style.background = "#272a33";
-        header.style.padding = "15px 50px";
+        header.style.padding = "5px 50px";
     }
   }
-/*
+
 $(document).ready(function(){
     $("#header").on("click","a", function (event) {
         event.preventDefault();
@@ -52,7 +52,7 @@ $(document).ready(function(){
         $('body,html').animate({scrollTop: top}, 1500);
     });
 });
-
+/*
 
 menuNavbar.onclick = function() {
     console.log(menuNavbar.attr("href") + " 456");

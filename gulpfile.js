@@ -1,9 +1,7 @@
-'use strict';
-
 const del = require('del');
-const gulp = require('gulp');
+const { src, dest, parallel, series, watch } = require('gulp');
 const csso = require('gulp-csso');
-const sass = require('gulp-scss');
+const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
 const rigger = require('gulp-rigger');
@@ -11,27 +9,21 @@ const imagemin = require('gulp-imagemin');
 const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
 
-gulp.task('del', function() {
-    del('./build');
-});
+const clean = () => {
+    return del('./build');
+};
 
 
-gulp.task('html', function() {
-    console.log('1');
-    gulp.src('./src/*.html')
-        .pipe(rigger().on('error', function (error) {
-            console.error(error.message);
-        }))
-        .pipe(gulp.dest('./build'))
-        .pipe(browserSync.stream())
-});
+const html = (cb) => {
+    return src('./src/*.html')
+        .pipe(rigger().on('error', (error) => cb(error.message)))
+        .pipe(dest('./build'))
+        .pipe(browserSync.stream());
+};
 
-gulp.task('styles', function () {
-    console.log('2');
-    gulp.src('./src/css/*.{sass,scss,css}')
-        .pipe(sass().on('error', function (error) {
-            console.error(error.message);
-        }))
+const styles = (cb) => {
+    return src('./src/css/*.{sass,scss,css}')
+        .pipe(sass().on('error', (error) => cb(error.message)))
         .pipe(autoprefixer({
             browsers: [
                 '> 1%',
@@ -49,64 +41,43 @@ gulp.task('styles', function () {
         .pipe(rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest('./build/css'))
+        .pipe(dest('./build/css'))
         .pipe(browserSync.stream())
-});
+};
 
-gulp.task('scripts', function() {
-    console.log('3');
-    gulp.src('./src/js/*')
-        .pipe(rigger().on('error', function (error) {
-            console.error(error.message);
-        }))
-        .pipe(uglify().on('error', function (error) {
-            console.error(error.message);
-        }))
+const scripts = (cb) => {
+    return src('./src/js/*')
+        .pipe(rigger().on('error', (error) => cb.error(error.message)))
+        .pipe(uglify().on('error', (error) => cb.error(error.message)))
         .pipe(rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest('./build/js'))
+        .pipe(dest('./build/js'))
         .pipe(browserSync.stream())
-});
+};
 
-gulp.task('images', function () {
-    console.log('4');
-    return gulp.src('./src/img/**/*')
+ const images = () => {
+    return src('./src/img/**/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('./build/img'));
-});
+        .pipe(dest('./build/img'));
+};
 
-gulp.task('fonts', function () {
-    console.log('5');
-    return gulp.src('./src/fonts/**/*')
+const fonts = () => {
+    return src('./src/fonts/**/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('./build/fonts'));
-});
+        .pipe(dest('./build/fonts'));
+};
 
-gulp.task('serve', function () {
-    console.log('6');
+const serve = () => {
     browserSync.init({
         server: './build',
         port: 8000
     });
-    gulp.watch(['./src/*.html', './src/html/*.html'], ['html']);
-    gulp.watch('./src/css/*.{sass,scss,css}', ['styles']);
-    gulp.watch('./src/js/*', ['scripts']);
-});
+    watch("./src/html/**/*.html", html, browserSync.reload)
+    watch('./src/*.html', html);
+    watch('./src/css/*.{sass,scss,css}', styles);
+    watch('./src/js/*', scripts);
+};
 
-gulp.task('dev', function(done) {
-    gulp.series('del', 'html', 'styles', 'scripts', 'fonts');
-    done();
-});
-
-gulp.task('build', function(done) {
-    console.log('0');
-    gulp.series('html', 'styles', 'scripts', 'fonts', 'images');
-    done();
-});
-
-gulp.task('default', function(done) {
-    gulp.task('build');
-    gulp.series('build');
-    done();
-});
+exports.build =  series(clean, parallel(html, styles, scripts, fonts, images));
+exports.default =  series(clean, parallel(html, styles, scripts, fonts, images), serve);

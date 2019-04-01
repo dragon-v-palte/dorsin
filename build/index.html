@@ -4,77 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="css/style.css" /> 
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
+    <link rel="stylesheet" type="text/css" href="css/style.min.css" />   
     <title>Dorsin - Resposible Landing Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
     <div class="header" id="header">
         <div class="container">
-            <div class="row">
+            <div class="menu">
                 <nav class="navbar navbar-expand-lg">
-                        <a class="navbar-brand" href="#top">
-                            <div class="logo-site" id="logo-site">
-                                DORSIN
-                            </div>
-                        </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="fas fa-bars"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="myNavbar">
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item active"><a class="nav-link" href="#top">Home <span class="sr-only">(current)</span></a></li>
-                                <li class="nav-item"><a class="nav-link" href="#our-services">Services</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#digital">Features</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#our-pricing">Pricing</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#behind">Team</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#get-in-touch">Contact</a></li>
-                            </ul>
-                            <span class="form-inline ml-5">
-                                <button class="btn-try-it">Try It Free</button>
-                            </span> 
-                        </div>
-
-                </nav>
-                          <!--
-                <div class="col-2">
+                        
                     <a class="navbar-brand" href="#top">
                         <div class="logo-site" id="logo-site">
                             DORSIN
                         </div>
                     </a>
-                </div>
-                <div class="col-10">
-                    <div class="toggle-block" id="toggle-block">
-                        <button type="button" class="btn-info navbar-toggle">
-                            ...
-                        </button>
-                    </div>
-                    <div class="menu">
-                        <ul class="nav">
-                            <li class="nav-item nav-link active"><a href="#top">Home <span class="sr-only">(current)</span></a></li>
-                            <li class="nav-item nav-link"><a href="#our-services">Services</a></li>
-                            <li class="nav-item nav-link"><a href="#digital">Features</a></li>
-                            <li class="nav-item nav-link"><a href="#our-pricing">Pricing</a></li>
-                            <li class="nav-item nav-link"><a href="#behind">Team</a></li>
-                            <li class="nav-item nav-link"><a href="#blog">Blog</a></li>
-                            <li class="nav-item nav-link"><a href="#get-in-touch">Contact</a></li>
-                        </ul>
-                        <span class="text-right">
-                            <button class="btn-try-it">Try It Free</button>
-                        </span>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="fas fa-bars"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="myNavbar">
                         
+                        <ul class="navbar-nav">
+                            <li class="nav-item active"><a class="nav-link" href="#top">Home <span class="sr-only">(current)</span></a></li>
+                            <li class="nav-item"><a class="nav-link" href="#our-services">Services</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#digital">Features</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#our-pricing">Pricing</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#behind">Team</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#get-in-touch">Contact</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right"> 
+                            <div class="text-center text-md-right">   
+                                <button class="btn-try-it">Try It Free</button>
+                            </div>
+                        </ul>
                     </div>
-                    
-                </div>
-            -->
-                    
-            </div>
-            
+                </nav>
+                
+            </div>       
         </div>
     </div>
     
@@ -98,9 +68,9 @@
 
     <div class="our-services" id="our-services">
         <div class="container">
-            <div class="block-name">
+            <h3 class="block-name">
                 Our Services
-            </div>
+            </h3>
             <p class="block-text" >We craft digital, graphic and dimensional thinking, 
                 to create category leading brand experiences that have meaning and add a value for our clients.
             </p>
@@ -211,22 +181,22 @@
 
     <div class="build-dream background">
         <div class="container">
-            <div class="background__block-name">
+            <h3 class="background__block-name">
                 Build your dream website today
-            </div>
+            </h3>
             <p class="background__block-text">But nothing the copy said could convince her 
                 and so it didn’t take long until a few insidious Copy Writers ambushed her.
             </p>
             <button class="btn btn-white">View Plan & Pricing</button>
-            <div class="background-pattern"></div>
+            <div class="background__pattern"></div>
         </div>
     </div>
     
     <div class="our-pricing" id="our-pricing">
         <div class="container">
-            <div class="block-name">
+            <h3 class="block-name">
                 Our Pricing
-            </div>
+            </h3>
             <p class="block-text" >Call to action pricing table is really crucial to your for your business website. 
                 Make your bids stand-out with amazing options.
             </p>
@@ -238,7 +208,7 @@
                                 Economy
                             </h3>
                             <p class="price">$9.90</p>
-                            <p class="price-desc">BILLING PER MONTH</p>
+                            <p class="price__desc">BILLING PER MONTH</p>
                             <p class="pricing-item__text">
                                 Bandwidth: <span class="accent">1GB</span> <br/>
                                 Onlinespace: <span class="accent">50MB</span> <br/>
@@ -255,7 +225,7 @@
                                 Economy
                             </h3>
                             <p class="price">$9.90</p>
-                            <p class="price-desc">BILLING PER MONTH</p>
+                            <p class="price__desc">BILLING PER MONTH</p>
                             <p class="pricing-item__text">
                                 Bandwidth: 1GB <br/>
                                 Onlinespace: 50MB <br/>
@@ -272,7 +242,7 @@
                                 Economy
                             </h3>
                             <p class="price">$9.90</p>
-                            <p class="price-desc">BILLING PER MONTH</p>
+                            <p class="price__desc">BILLING PER MONTH</p>
                             <p class="pricing-item__text">
                                 Bandwidth: <span class="accent">1GB</span> <br/>
                                 Onlinespace: <span class="accent">50MB</span> <br/>
@@ -290,54 +260,54 @@
 
     <div class="behind" id="behind">
         <div class="container">
-            <div class="block-name">
+            <h3 class="block-name">
                 Behind The People
-            </div>
+            </h3>
             <p class="block-text" >We craft digital, graphic and dimensional thinking, 
                 to create category leading brand experiences that have meaning and add a value for our clients.
             </p>
             <div class="behind-content">
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-6 col-lg-3">
-                        <div class="behind-item">
+                        <div class="behind__item">
                             <img src="img/behind-1.jpg" alt="#">
-                            <h3 class="behind-item__name">
+                            <h3 class="behind__item__name">
                                 Frank Johnson
                             </h3>
-                            <p class="behind-item__text">
+                            <p class="behind__item__text">
                                 CEO
                             </p>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3">
-                        <div class="behind-item">
+                        <div class="behind__item">
                             <img src="img/behind-2.jpg" alt="#">
-                            <h3 class="behind-item__name">
+                            <h3 class="behind__item__name">
                                 Elaine Stclair
                             </h3>
-                            <p class="behind-item__text">
+                            <p class="behind__item__text">
                                 Designer
                             </p>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3">
-                        <div class="behind-item">
+                        <div class="behind__item">
                             <img src="img/behind-3.jpg" alt="#">
-                            <h3 class="behind-item__name">
+                            <h3 class="behind__item__name">
                                 Wanda Arthur
                             </h3>
-                            <p class="behind-item__text">
+                            <p class="behind__item__text">
                                 Developer
                             </p>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-3">
-                        <div class="behind-item">
+                        <div class="behind__item">
                             <img src="img/behind-4.jpg" alt="#">
-                            <h3 class="behind-item__name">
+                            <h3 class="behind__item__name">
                                 Joshua Stemple
                             </h3>
-                            <p class="behind-item__text">
+                            <p class="behind__item__text">
                                 Manager
                             </p>
                         </div>
@@ -349,37 +319,37 @@
 
     <div class="get-started background">
         <div class="container">
-            <div class="background__block-name">
+            <h3 class="background__block-name">
                 Let's Get Started
-            </div>
+            </h3>
             <p class="background__block-text">Far far away, behind the word mountains, 
                 far from the countries Vokalia and Consonantia, there live the blind texts.
             </p>
             <button class="btn btn-white">Get started &rarr;</button>
         </div>
-        <div class="background-pattern"></div>
+        <div class="background__pattern"></div>
     </div>
 
     <div class="blog" id="blog">
         <div class="container">
-            <h2 class="block-name">
+            <h3 class="block-name">
                 Blog
-            </h2>
+            </h3>
             <p class="block-text" >Separated they live in Bookmarksgrove right at the coast of the Semantics, 
                 a large language ocean className at a euismod mus luctus quam.
             </p>
             <div class="blog__content">
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="blog-item">
+                        <div class="blog__item">
                             <img src="img/blog-1.jpg" alt="#">
-                            <p class="blog-item__topic">
+                            <p class="blog__item__topic">
                                 UI & UX Design
                             </p>                        
-                            <h3 class="blog-item__name">
+                            <h3 class="blog__item__name">
                                 Doing a cross country road trip
                             </h3>
-                            <p class="blog-item__text">
+                            <p class="blog__item__text">
                                 She packed her seven versalia, put her initial 
                                 into the belt and made herself on the way..
                             </p>
@@ -387,15 +357,15 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="blog-item">
+                        <div class="blog__item">
                             <img src="img/blog-2.jpg" alt="#">
-                            <p class="blog-item__topic">
+                            <p class="blog__item__topic">
                                 Digital Marketing
                             </p>                        
-                            <h3 class="blog-item__name">
+                            <h3 class="blog__item__name">
                                 New exhibition at our Museum
                             </h3>
-                            <p class="blog-item__text">
+                            <p class="blog__item__text">
                                 Pityful a rethoric question ran over 
                                 her cheek, then she continued her way.
                             </p>
@@ -403,15 +373,15 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-4">
-                        <div class="blog-item">
+                        <div class="blog__item">
                             <img src="img/blog-3.jpg" alt="#">
-                            <p class="blog-item__topic">
+                            <p class="blog__item__topic">
                                 Travelling
                             </p>
-                            <h3 class="blog-item__name">
+                            <h3 class="blog__item__name">
                                 Why are so many people..
                             </h3>
-                            <p class="blog-item__text">
+                            <p class="blog__item__text">
                                 Far far away, behind the word mountains, 
                                 far from the countries Vokalia and Consonantia.
                             </p>
@@ -425,17 +395,17 @@
 
     <div class="get-in-touch" id="get-in-touch">
         <div class="container">
-            <h2 class="block-name">
+            <h3 class="block-name">
                 Get In Touch
-            </h2>
+            </h3>
             <p class="block-text" >We thrive when coming up with innovative ideas but also 
                 understand that a smart concept should be supported with measurable results.
             </p>
             <div class="row">
                 <div class="col-12 col-lg-4">
                     <div class="address-block">
-						<div class="row">
-							<div class="col-12 col-md -4col-lg-12">
+						<div class="row text-center text-md-left">
+							<div class="col-12 col-md-4 col-lg-12">
 								<p class="address-name">Office Address 1:</p>
 								<p class="address-text">4461 Cedar Street Moro, AR 72368<br/>
 							</div>
@@ -487,13 +457,13 @@
                         <a href="#"><i class="fab fa-jenkins"></i></a>
                     </div>
                 </div>
-                <div class="col-12 col-lg-3">
+                <div class="col-12 col-md-4 offset-md-2 col-lg-3 offset-lg-0">
                     <a href="tel:#" class="contact__phone">
                         <i class="fas fa-phone"></i>
                         +91 123 4556 789
                     </a>
                 </div>
-                <div class="col-12 col-lg-3">
+                <div class="col-12 col-md-4 col-lg-3">
                     <a href="mailto:#" class="contact__envelope">
                         <i class="far fa-envelope-open"></i>
                         Support@info.com
@@ -503,7 +473,7 @@
         </div>
     </div>
 
-    <footer>
+    <div class="footer">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-6 col-lg-3">
@@ -541,7 +511,7 @@
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
 					<div class="footer__list">
-						<div class="footer__subscribe justify-content-center">
+						<div class="footer__subscribe">
 							<h3>Subscribe</h3>
 							<p>In an ideal world this text wouldn’t exist, a client would 
 								acknowledge the importance of having web copy before the design starts.
@@ -556,18 +526,18 @@
 					</div>
                 </div>
             </div>
-            </div>
-    </footer>
+        </div>
+    </div>
     <div class="footer-down">
         <div class="container">
-            <div class="row">
+            <div class="row text-center text-md-left">
                 <div class="col-12 col-md-6">
                     <span class="footer-down__text">
                         2019 © Dorsin - Themesbrand payment
                     </span>
                 </div>
                 <div class="col-12 col-md-6">
-                    <div class="text-right">
+                    <div class="text-center text-md-right">
                         <span class="footer-payment">
                             <i class="fab fa-cc-visa"></i>
                         </span>
@@ -588,6 +558,6 @@
             
         
 
-    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/main.min.js"></script>
     </body>
 </html>
