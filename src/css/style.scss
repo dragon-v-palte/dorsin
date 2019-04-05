@@ -41,6 +41,15 @@
     position: relative;
     top: 0; 
     z-index: 10;
+    .navbar {
+        margin-bottom: 0;
+    }
+    .navbar-brand {
+        height: auto;
+    }
+    .menu-icon {
+        color: white;
+    }
     ul {
         margin-bottom: 0;
     }
@@ -61,9 +70,13 @@
     .active a {
         color: white;
     }
+    .nav-link {
+        padding: 5px;
+    }
     .btn-try-it {
         justify-content: flex-end;
         padding: 10px 20px;
+        margin: 10px 0;
         border-radius: 22px;
         border: 0;
         color: white;
@@ -475,11 +488,7 @@
 	.header {
 		background: #272a33;
 	}
-	
-	.navbar-toggle {
-		display: block;
-	}
-	
+		
     .digital__image {
         display: none;
     }
@@ -508,12 +517,6 @@
 }
 
 @media screen and (min-width: 768px) {    
-    .header {
-        position: fixed;
-        ul li {
-            float: left;
-        }
-    }
     .footer {
         &__list {
             text-align: left;
@@ -527,7 +530,16 @@
     }
 }
 
-@media screen and (min-width: 992px) {	
+@media screen and (min-width: 992px) {
+    .header {
+        position: fixed;
+        li {
+            padding: 10px;
+        }
+        .nav-link {
+          padding: 10px;
+        }
+    }	
     .hero-block {
         padding-bottom: 0px;
         img {
